@@ -1,21 +1,21 @@
-function float2Text(num) {
+function float2Words(num) {
     let floatInText = "";
     let decimal = num.toString().split(".")[1];
     if (Math.floor(num) == 0) {
         floatInText = "Zero point"
     } else {
         console.log(`>0`);
-        floatInText = int2Text(Math.floor(num)) + " point";
+        floatInText = integer2Words(Math.floor(num)) + " point";
     } // End if
     console.log(decimal);
     for (let i = 0; i < decimal.length; i++) {
-        floatInText += " " + int2Text(decimal.charAt(i));
+        floatInText += " " + integer2Words(decimal.charAt(i));
     } // end for loop
     return floatInText.trim();
-} //End float2Text
+} //End float2Words
 
-function curr2Text(value, currency) {
-    let currencyInText = int2Text(Math.floor(value), "us");
+function currency2Words(value, currency) {
+    let currencyInText = integer2Words(Math.floor(value), "us");
     const currencies = [
         ["USD", "dollar", "cents"],
         ["EUR", "euros", "cents"],
@@ -33,14 +33,14 @@ function curr2Text(value, currency) {
     currencyInText += " " + unit;
     if (Math.floor(value) != value) {
         currencyInText += " and "
-            + int2Text(Math.floor((value % 1) * 100))
+            + integer2Words(Math.floor((value % 1) * 100))
             + " "
             + subunit;
     } // end if
     return currencyInText.trim()
-} // End curr2Text
+} // End currency2Words
 
-function int2Text(num, sys) {
+function integer2Words(num, sys) {
     let numInText = ""
     num = parseInt(num);
     const thousands = ["", "thousand", "million", "milliard", "billion", "billiard", "trillion", "quadrillion", "quintillion", "sextillion"];
@@ -52,22 +52,22 @@ function int2Text(num, sys) {
     num = num.toString();
     let i = 1;
     while (i < (num.length / 3)) {
-        numInText = (hundreds2Text(num.substring(num.length - (i * 3), num.length - (i - 1) * 3)))
+        numInText = (hundreds2Words(num.substring(num.length - (i * 3), num.length - (i - 1) * 3)))
             + " "
             + thousands[i - 1]
             + " "
             + numInText;
         i++
     } //end while
-    numInText = (hundreds2Text((num.substring(0, num.length - ((i - 1) * 3)))))
+    numInText = (hundreds2Words((num.substring(0, num.length - ((i - 1) * 3)))))
         + " "
         + thousands[i - 1]
         + " "
         + numInText;
     return numInText.trim();
-} // End int2Text
+} // End integer2Words
 
-function hundreds2Text(num) {
+function hundreds2Words(num) {
     const zero2Nineteen = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
     const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
     let txt = "";
@@ -88,6 +88,4 @@ function hundreds2Text(num) {
         txt += zero2Nineteen[Math.floor(parseInt(num) % 10)];
     } // End if
     return txt;
-} // End hundreds2Text
-
-console.log(curr2Text(993.22, "EUR"));
+} // End hundreds2Words
