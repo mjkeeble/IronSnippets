@@ -66,7 +66,7 @@ Have fun,
 | !bs | Bootstrap template (like Emmet '!' shortcut with Bootstrap links added
 
  ----------------------------
-# NumbersToText
+# NumberToWords
 Set of functions to convert integers, currencies and floating point numbers to words
 
 float2Words - converts a floating point number to text. Calls integer2Words and hundreds2Words functions.
