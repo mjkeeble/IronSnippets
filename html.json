@@ -29,7 +29,7 @@
 			"\t<body>",
 			"\t\t",
 			"\t\t<!-- PAGE CONTENT HERE-->",
-			"\t\t<h1>Don't forget to add links to your CSS (uner <head> and Javascript at the end of <body>! :-)",
+			"\t\t<h1>Don't forget to add links to your CSS (under &lthead&gt) and JavaScript (at the end of &ltbody&gt after Bootstrap links)!   :-)</h1>",
 			"\t\t",
 			"\t\t",
 			"\t\t<!-- jQuery first, then Popper, then Bootstrap JS. -->",
