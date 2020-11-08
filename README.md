@@ -40,7 +40,7 @@ Have fun,
 ### console.log
 | sclog | console.log('string') |
 
-| clog | console.log() |
+| cl | console.log() |
 
 
 ### DOM manipulation
