@@ -58,3 +58,6 @@ Have fun,
 | jassuite | Initiate Jasmine test suite |
 
 | jastest | Jasmine test definition within suite |
+
+# HTML Code snippets
+| !bs | Bootstrap template (like Emett '!' shortcut with Bootstrap links added
