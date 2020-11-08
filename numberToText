@@ -1,0 +1,93 @@
+function float2Text(num) {
+    let floatInText = "";
+    let decimal = num.toString().split(".")[1];
+    if (Math.floor(num) == 0) {
+        floatInText = "Zero point"
+    } else {
+        console.log(`>0`);
+        floatInText = int2Text(Math.floor(num)) + " point";
+    } // End if
+    console.log(decimal);
+    for (let i = 0; i < decimal.length; i++) {
+        floatInText += " " + int2Text(decimal.charAt(i));
+    } // end for loop
+    return floatInText.trim();
+} //End float2Text
+
+function curr2Text(value, currency) {
+    let currencyInText = int2Text(Math.floor(value), "us");
+    const currencies = [
+        ["USD", "dollar", "cents"],
+        ["EUR", "euros", "cents"],
+        ["GBP", "pounds", "pence"]
+    ];
+    let unit = "";
+    let subunit = "";
+    for (let i = 0; i < currencies.length; i++) {
+        if (currencies[i][0] == currency.toUpperCase()) {
+            unit = currencies[i][1];
+            subunit = currencies[i][2];
+            break;
+        }; // end if;
+    } // end for loop
+    currencyInText += " " + unit;
+    if (Math.floor(value) != value) {
+        currencyInText += " and "
+            + int2Text(Math.floor((value % 1) * 100))
+            + " "
+            + subunit;
+    } // end if
+    return currencyInText.trim()
+} // End curr2Text
+
+function int2Text(num, sys) {
+    let numInText = ""
+    num = parseInt(num);
+    const thousands = ["", "thousand", "million", "milliard", "billion", "billiard", "trillion", "quadrillion", "quintillion", "sextillion"];
+
+    if (sys == "us") {
+        thousands.splice(5, 1);
+        thousands.splice(3, 1);
+    } // end if
+    num = num.toString();
+    let i = 1;
+    while (i < (num.length / 3)) {
+        numInText = (hundreds2Text(num.substring(num.length - (i * 3), num.length - (i - 1) * 3)))
+            + " "
+            + thousands[i - 1]
+            + " "
+            + numInText;
+        i++
+    } //end while
+    numInText = (hundreds2Text((num.substring(0, num.length - ((i - 1) * 3)))))
+        + " "
+        + thousands[i - 1]
+        + " "
+        + numInText;
+    return numInText.trim();
+} // End int2Text
+
+function hundreds2Text(num) {
+    const zero2Nineteen = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+    const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+    let txt = "";
+    if (num.length == 3) {
+        txt += zero2Nineteen[num.charAt(0)] + " hundred";
+        num = num.substring(1)
+        if (num > 0) {
+            txt += " and"
+        } else {
+            return txt;
+        } // End if
+    } // End if
+    if (num < 20) {
+        txt += " " + zero2Nineteen[parseInt(num)];
+    } else {
+        txt += " " + tens[Math.floor(parseInt(num) / 10)];
+        if (parseInt(num) % 10 > 0) txt += "-";
+        txt += zero2Nineteen[Math.floor(parseInt(num) % 10)];
+    } // End if
+    return txt;
+} // End hundreds2Text
+
+console.log(curr2Text(993.22, "EUR"));
