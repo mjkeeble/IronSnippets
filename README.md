@@ -1,4 +1,4 @@
-# Javascript code snippets
+# Code snippets
 
 Over the past two weeks I've realised that syntax errors are oftrn the cause of bugs that we have to spend far too long hunting. I think snippets could be a good way to tackle that because they can provide the basic syntax for code elements we use often and help avoid errors.
 
@@ -11,6 +11,8 @@ Have fun,
 #### Mark
  
  ----------------------------
+ # JavaScript snippets
+ 
 
 ##### | abbreviation | description |
 
@@ -59,5 +61,16 @@ Have fun,
 
 | jastest | Jasmine test definition within suite |
 
+ ----------------------------
 # HTML Code snippets
-| !bs | Bootstrap template (like Emett '!' shortcut with Bootstrap links added
+| !bs | Bootstrap template (like Emmet '!' shortcut with Bootstrap links added
+
+ ----------------------------
+# NumbersToText
+Set of functions to convert integers, currencies and floating point numbers to words
+
+float2Words - converts a floating point number to text. Calls integer2Words and hundreds2Words functions.
+currency2Words - converts a monetary value to text. Calls integer2Words and hundreds2Words functions. Currency list currently only contains dollar, euro and pounds - additional currencies can be added in the currency array.
+integer2Words - calls hundreds2Words function.
+
+This may not be the most elegant approach to converting numbers, so improvement suggestions are welcome!
