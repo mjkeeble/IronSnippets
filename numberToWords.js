@@ -1,3 +1,5 @@
+// Please refer to the IronSnippets README for information on these functions
+
 function float2Words(num) {
     let floatInText = "";
     let decimal = num.toString().split(".")[1];
@@ -17,6 +19,7 @@ function float2Words(num) {
 function currency2Words(value, currency) {
     let currencyInText = integer2Words(Math.floor(value), "us");
     const currencies = [
+        //["Currency code", "currency unit", "subdivision"]
         ["USD", "dollar", "cents"],
         ["EUR", "euros", "cents"],
         ["GBP", "pounds", "pence"]
@@ -40,12 +43,12 @@ function currency2Words(value, currency) {
     return currencyInText.trim()
 } // End currency2Words
 
-function integer2Words(num, sys) {
+function integer2Words(num, sys = "") {
     let numInText = ""
     num = parseInt(num);
     const thousands = ["", "thousand", "million", "milliard", "billion", "billiard", "trillion", "quadrillion", "quintillion", "sextillion"];
 
-    if (sys == "us") {
+    if (sys.toLowerCase() == "us") {
         thousands.splice(5, 1);
         thousands.splice(3, 1);
     } // end if
