@@ -1,6 +1,6 @@
 # Code snippets
 
-Over the past two weeks I've realised that syntax errors are oftrn the cause of bugs that we have to spend far too long hunting. I think snippets could be a good way to tackle that because they can provide the basic syntax for code elements we use often and help avoid errors.
+Over the past two weeks I've realised that syntax errors are often the cause of bugs that we have to spend far too long hunting. I think snippets could be a good way to tackle that because they can provide the basic syntax for code elements we use often and help avoid errors.
 
 I have started to compile a snippet file (for now just JavaScript) to build up a library of snippets for regularly used program elements. Feel free to use this and to let me know if you find any bugs or want to have items added.
 
@@ -67,10 +67,46 @@ Have fun,
 
  ----------------------------
 # NumberToWords
-Set of functions to convert integers, currencies and floating point numbers to words
-
-float2Words - converts a floating point number to text. Calls integer2Words and hundreds2Words functions.
-currency2Words - converts a monetary value to text. Calls integer2Words and hundreds2Words functions. Currency list currently only contains dollar, euro and pounds - additional currencies can be added in the currency array.
-integer2Words - calls hundreds2Words function.
-
+Set of functions to convert integers, decimals and currencies to words.
 This may not be the most elegant approach to converting numbers, so improvement suggestions are welcome!
+
+
+### float2Words
+Parameters:
+1. num - the number to be converted.
+
+Returns the amount entered as a text string in words.
+
+*The code expects a decimal point.* If a comma is used replace the '.' in the split method in line 5 with a comma.
+
+*Dependencies:* Calls integer2Words and hundreds2Words functions.
+
+### currency2Words
+Parameters:
+1. num - the value to be converted
+1. 'currency' (optional) - three-letter currency code
+
+Returns a monetary value as a text string in words. 
+
+The currency list includes dollar, euro and pounds - additional currencies can be added to the currency object after line 22.
+
+Uses the US numbering system for billions.
+
+*Dependencies:* Calls integer2Words and hundreds2Words functions. 
+
+### integer2Words
+Parameters:
+1. num - the value to be converted
+1. 'sys' (optional) - enter 'us' to use the American numbering system where 10^9 = 1 billion, otherwise 10^12 = 1 billion
+
+Returns an integer as a text string in words.
+
+*Dependencies:* calls hundreds2Words function.
+
+
+### hundreds2Words
+Returns an integer value below 1000 as a text string in words.
+
+Can be used on a stand-alone basis, but is concieved as a subordinated function to the others.
+
+This function can be used on a stand-alone basis where appropriate, but was concieved as a subordinate function to integer2Words.
