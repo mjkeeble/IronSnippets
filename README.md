@@ -88,7 +88,7 @@ Parameters:
 
 Returns a monetary value as a text string in words. 
 
-The currency list includes dollar, euro and pounds - additional currencies can be added to the currency object after line 22.
+The currency list includes dollar, euro and pounds - additional currencies can be added to the currencies array after line 22.
 
 Uses the US numbering system for billions.
 
