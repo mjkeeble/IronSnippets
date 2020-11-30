@@ -1,4 +1,6 @@
-// Please refer to the IronSnippets README for information on these functions
+// Please refer to the IronSnippets ReadMe for information on these functions
+// This file is part of IronSnippets by Mark J. Keeble
+// https://github.com/mjkeeble/IronSnippets
 
 function float2Words(num) {
     let floatInText = "";
@@ -6,7 +8,6 @@ function float2Words(num) {
     if (Math.floor(num) == 0) {
         floatInText = "Zero point"
     } else {
-        console.log(`>0`);
         floatInText = integer2Words(Math.floor(num)) + " point";
     } // End if
     console.log(decimal);
@@ -18,22 +19,16 @@ function float2Words(num) {
 
 function currency2Words(value, currency) {
     let currencyInText = integer2Words(Math.floor(value), "us");
-    const currencies = [
+    const currencies = {
         //["Currency code", "currency unit", "subdivision"]
-        ["USD", "dollar", "cents"],
-        ["EUR", "euros", "cents"],
-        ["GBP", "pounds", "pence"]
-    ];
-    let unit = "";
-    let subunit = "";
-    for (let i = 0; i < currencies.length; i++) {
-        if (currencies[i][0] == currency.toUpperCase()) {
-            unit = currencies[i][1];
-            subunit = currencies[i][2];
-            break;
-        }; // end if;
-    } // end for loop
-    currencyInText += " " + unit;
+        "USD": ["dollar", "cents"],
+        "EUR": ["euros", "cents"],
+        "GBP": ["pounds", "pence"]
+    };
+    let unit = currencies[currency][0];
+    let subunit = currencies[currency][1];
+    currencyInText += " " + unit
+    if (Math.floor(value) > 1) currencyInText +'s';
     if (Math.floor(value) != value) {
         currencyInText += " and "
             + integer2Words(Math.floor((value % 1) * 100))
