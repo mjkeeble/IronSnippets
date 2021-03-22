@@ -1,8 +1,8 @@
 # Code snippets
 
-Over the past two weeks I've realised that syntax errors are often the cause of bugs that we have to spend far too long hunting. I think snippets could be a good way to tackle that because they can provide the basic syntax for code elements we use often and help avoid errors.
+The snippets files contain a variety of snippets for common programming structures and components for MERN full-stack applications put together for my own benefit
 
-I have started to compile a snippet file (for now just JavaScript) to build up a library of snippets for regularly used program elements. Feel free to use this and to let me know if you find any bugs or want to have items added.
+Feel free to use this and to let me know if you find any bugs or want to have items added.
 
 For a good video on snippets and how to get them installed see here: https://youtu.be/K3gLlZm-m_8
 
@@ -55,9 +55,26 @@ Have fun,
 
 | qs | document.querySelector |
 
-| gsa | document.querySelectorAll|
+| gsa | document.querySelectorAll |
 
-### Jasmine test suite
+
+ ----------------------------
+# MERN-stack snippets
+(included in javascript.json)
+
+### Back-end
+| mcrud | Mongoose CRUD route file template |
+
+| mmodel | Mongoose data schema file template |
+
+### Front-end
+
+| axreq | Axios request (from Traversey Media) |
+
+ ----------------------------
+# Jasmine test suite snippets
+(included in javascript.json)
+
 | jassuite | Initiate Jasmine test suite |
 
 | jastest | Jasmine test definition within suite |
