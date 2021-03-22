@@ -1,228 +1,337 @@
 {
-	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// 
-	// "template":{
-	// 	"prefix": "",
-	// 	"body": [ (use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
-	// 		"",
-	//		 ""
-	// 	],
-	// 	"description": ""
-	// },	
-	"for array": {
-		"prefix": "4arr",
-		"body": [
-			"for (let ${1:i} = 0; $1 < ${2:array}.length; $1++) {",
-			"\tconst ${3:element} = ${2:array}[$1] ;",
-			"\t$0;",
-			"}",
-		],
-		"description": "For loop for array"
-	},
+  // Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  //
+  // "template":{
+  // 	"prefix": "",
+  // 	"body": [ (use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
+  // 		"",
+  //		 ""
+  // 	],
+  // 	"description": ""
+  // },
 
-	"array.map": {
-		"prefix": "arrmap",
-		"body": [
-			"${1:array}.map(function(${2:arguements}) {",
-			"\t${3:code}",
-			"\t return ${0:value};",
-			"});"
-		],
-		"description": "array.map method"
-	},
-	"array.reduce": {
-		"prefix": "arrreduce",
-		"body": [
-			"${1:array}.reduce(function(${2:arguements}) {",
-			"\t${3:code}",
-			"\t return ${0:value};",
-			"});"
-		],
-		"description": "array.reduce method"
-	},
 
-	"array.filter": {
-		"prefix": "arrfilter",
-		"body": [
-			"${1:array}.filter((${2:arguements}) {",
-			"\t${3:code}",
-			"\t return ${0:value};",
-			"});"
-		],
-		"description": "array.filter method"
-	},
-
-	"array.forEach": {
-		"prefix": "arr4e",
-		"body": [
-			"${1:array}forEach(function(${2:arguement}){",
-			"\t$0;",
-			"});"
-		],
-		"description": "Array.forEach iteration method"
-	},
-
-	"console.log string": {
-		"prefix": "sclog",
-		"body": [
-			"console.log(`$1`);",
-			"$2"
-		],
-		"description": "console.log string in backticks"
-	},
-
-	"console.log ": {
-		"prefix": "cl",
-		"body": [
-			"console.log($1);",
-			"$2"
-		],
-		"description": "console.log string"
-	},
-
-	"for loop": {
-		"prefix": "4loop",
-		"body": [
-			"for(let ${1:i} = 0; $1 ${2:condition}; $1++) { ",
-			"\t${0};",
-			"}"
-		],
-		"description": "for loop"
-	},
-
-	"for loop 2d array": {
-		"prefix": "4loop2d",
-		"body": [
-			"for(let ${1:i} = 0; $1 < ${2:array}.length; $1++) { ",
-			"\tfor(let ${3:j} = 0; $3 < $2[$1].length; $3++) {",
-			"\t\t${0};",
-			"\t}",
-			"}"
-		],
-		"description": "2 dimensional for loop"
-	},
-
-		"array.sort ascending":{
-		"prefix": "sortu",
-		"body": [ //(use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
-			"${1:array}.sort(function(${2:a}, ${3:b}) {",
-			"\treturn $2 - $3;",
-			"});",
-			""
-		],
-		"description": "array.sort ascending"
-	},	
-
-		"array.sort descending":{
-		"prefix": "sortd",
-		"body": [ //(use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
-			"${1:array}.sort(function(${2:a}, ${3:b}) {",
-			"\treturn $3 - $2;",
-			"});",
-			""
-		],
-		"description": "array.sort descending"
-	},	
+  "for array": { //ok
+    "prefix": "4arr",
+    "body": [
+      "for (let ${1:i} = 0; $1 < ${2:array}.length; $1++) {",
+      "\tconst ${3:element} = ${2:array}[$1] ;",
+      "\t$0;",
+      "} // end ${2:array} for loop",
+    ],
+    "description": "For loop for array"
+  },
+  "array.map": { //ok
+    "prefix": "arrmap",
+    "body": [
+      "${1:array}.map(function(${2:arguements}) {",
+      "\t${3:code}",
+      "\t return ${0:value};",
+      "}); // end {1:array}.map function"
+    ],
+    "description": "array.map method"
+  },
+  "array.reduce": { //ok
+    "prefix": "arrreduce",
+    "body": [
+      "${1:array}.reduce(function(${2:arguements}) {",
+      "\t${3:code}",
+      "\t return ${0:value};",
+      "}); // end {1:array}.reduce function"
+    ],
+    "description": "array.reduce method"
+  },
+  "array.filter": { //ok
+    "prefix": "arrfilter",
+    "body": [
+      "${1:array}.filter((${2:arguements}) {",
+      "\t${3:code}",
+      "\t return ${0:value};",
+      "}); // end {1:array}.filter function"
+    ],
+    "description": "array.filter method"
+  },
+  "array.forEach": { //ok
+    "prefix": "arr4e",
+    "body": [
+      "${1:array}forEach(function(${2:arguement}){",
+      "\t$0;",
+      "});  // end {1:array}.forEach loop"
+    ],
+    "description": "Array.forEach iteration method"
+  },
+  "console.log string": { //ok
+    "prefix": "scl",
+    "body": [
+      "console.log(`$1`); //*********************",
+      "$2"
+    ],
+    "description": "console.log string in backticks"
+  },
+  "console.log ": { //ok
+    "prefix": "cl",
+    "body": [
+      "console.log($1); //*********************",
+      "$2"
+    ],
+    "description": "console.log"
+  },
+  "for loop": { //ok
+    "prefix": "4loop",
+    "body": [
+      "for(let ${1:i} = 0; $1 ${2:condition}; $1++) { ",
+      "\t${0};",
+      "} // end for loop"
+    ],
+    "description": "for loop"
+  },
+  "for loop 2d array": { //ok
+    "prefix": "4loop2d",
+    "body": [
+      "for(let ${1:i} = 0; $1 < ${2:array}.length; $1++) { ",
+      "\tfor(let ${3:j} = 0; $3 < $2[$1].length; $3++) {",
+      "\t\t${0};",
+      "\t} //end inner for loop",
+      "} // end outer for loop"
+    ],
+    "description": "2 dimensional for loop"
+  },
+  "array.sort ascending": {
+    "prefix": "sortu",
+    "body": [ //(use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
+      "${1:array}.sort(function(${2:a}, ${3:b}) {",
+      "\treturn $2 - $3;",
+      "}); // end array sort",
+      ""
+    ],
+    "description": "array.sort ascending"
+  },
+  "array.sort descending": {
+    "prefix": "sortd",
+    "body": [ //(use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
+      "${1:array}.sort(function(${2:a}, ${3:b}) {",
+      "\treturn $3 - $2;",
+      "}); // end array sort",
+      ""
+    ],
+    "description": "array.sort descending"
+  },
 
 	// ==================================
-	// DOM manipulation functionsbased on https://github.com/madskristensen/JavaScriptSnippetPack
+	// Express back-end snippets
 	// ==================================
 
-	"addEventListener": {
-		"prefix": "ae",
+	"Mongoose data model template": {
+		"prefix": "mmodel",
 		"body": [
-			"${1:document}.addEventListener('${2:event}', ${3:functionToCall});",
-			""
-		],
-		"description": "Add event listener"
-	},
-
-	"getElementByID": {
-		"prefix": "gi",
-		"body": [
-			"${1:document}.getElementById('${2:ID}');",
-			""
-		],
-		"description": "getElementByID"
-	},
-
-	"getElementsByClassName": {
-		"prefix": "gc",
-		"body": [
-			"${1:document}.getElementsByClassName('${2:class}');",
-			""
-		],
-		"description": "getElementsByClassName"
-	},
-
-	"getElementsByTagName": {
-		"prefix": "gt",
-		"body": [
-			"${1:document}.getElementsByTagName('${2:tag}');",
-			""
-		],
-		"description": "getElementsByTagName"
-	},
-
-	"querySelector": {
-		"prefix": "qs",
-		"body": [
-			"${1:document}.querySelector('${2:selectors}');",
-			""
-		],
-		"description": "querySelector"
-	},
-
-	"querySelectorAll": {
-		"prefix": "qsa",
-		"body": [
-			"${1:document}.querySelectorAll('${2:selectors}');",
-			""
-		],
-		"description": "querySelectorAll"
-	},
-
-	// ==================================
-	// Jasmine testing snippets
-	// ==================================
-	"Jasmine test suite": {
-		"prefix": "jassuite",
-		"body": [ 
-			"describe('${1:Test_suite_description}', function() {",
-			"\t// ADD YOUR TESTS HERE",
-			"\t$0",
+			"const mongoose = require('mongoose');",
+			"const Schema = mongoose.Schema;",
+			"const ${1:${TM_FILENAME_BASE/(.*)$/${1:/downcase}/}}Schema = new Schema({",
+				"$2",
+				"},",
+				"{timestamps: true}",
+			");",
 			"",
-			"});" //(last line of array shiuld not end with a comma)
+			"const ${1/(.*)$/${1:/capitalize}/}= mongoose.model = ('${1/(.*)$/${1:/capitalize}/}', $1Schema);",
+			"",
+			"module.exports = ${1/(.*)$/${1:/capitalize}/};"
 		],
-		"description": "Initiate test suite"
+		"description": "Generic model template with timestamps activated"
 	},
 
-	"Jasmine test": {
-		"prefix": "jastest",
-		"body": [ 
-			"it('${1:test_description}', function() {",
-			"\texpect(${2:test_input}).${3:matcher}(${4:test_output});", // see https://jasmine.github.io/api/edge/matchers.html for list of prefefined matchers
-			"});",
-			"$0"
-		],
-		"description": "Define Jasmine test"
-	},
+  "Mongoose CRUD route file": {
+    "prefix": "mcrud",
+    "body": [
+      "const express = require('express');",
+      "const { get } = require('mongoose');",
+      "const router = express.Router();",
+      "const ${1:${TM_FILENAME_BASE/(.*)s$/${1:/capitalize}/}} = require('../models/$1')",
+      "",
+      "  // ================================",
+      "  // create blog post",
+      "  router.post('/', (req, res) => {",
+      "",
+      "    const { title, content } = req.body;",
+      "    $1.create({",
+      "      title,",
+      "      content",
+      "    })",
+      "      .then(${1/(.*)$/${1:/downcase}/} => {",
+      "        res.status(201).json(${1/(.*)$/${1:/downcase}/});",
+      "",
+      "      })",
+      "      .catch(err => {",
+      "        res.json(err);",
+      "      })",
+      "  });",
+      "",
+      "  // ================================",
+      "  // get all blog posts",
+      "  router.get('/', (req, res) => {",
+      "    $1.find()",
+      "      .then(${1/(.*)$/${1:/downcase}/}s => {",
+      "        res.status(200).json(${1/(.*)$/${1:/downcase}/}s);",
+      "      })",
+      "      .catch(err => {",
+      "        res.json(err);",
+      "      })",
+      "  });",
+      "",
+      "  // ================================",
+      "  // GET individual post",
+      "  router.get('/:id', (req, res, next) => {",
+      "    $1.findById(req.params.id)",
+      "      .then(${1/(.*)$/${1:/downcase}/} => {",
+      "        if (!${1/(.*)$/${1:/downcase}/}) {",
+      "          res.status(204).json(${1/(.*)$/${1:/downcase}/});",
+      "        } else {",
+      "          res.status(200).json(${1/(.*)$/${1:/downcase}/});",
+      "        }",
+      "      })",
+      "      .catch(err => {",
+      "        res.json(err);",
+      "      })",
+      "  });",
+      "",
+      "",
+      "  // ================================",
+      "  // PUT update individual record",
+      "  // (PUT indicates whole record is replaced. for partial replacement use PATCH)",
+      "  router.put('/:id', (req, res, next) => {",
+      "    const { title, content } = req.body;",
+      "    $1.findByIdAndUpdate(",
+      "      req.params.id,",
+      "      { title, content },",
+      "      { new: true } //ensures we get the updated document as a return not the pre-update version",
+      "    )",
+      "      .then(${1/(.*)$/${1:/downcase}/} => {",
+      "        res.status(200).json(${1/(.*)$/${1:/downcase}/})",
+      "      })",
+      "      .catch(err => {",
+      "        res.json(err);",
+      "      })",
+      "  });",
+      "",
+      "  // ================================",
+      "  // DELETE an individual post",
+      "  router.delete('/:id', (req, res, next) => {",
+      "    $1.findByIdAndDelete(req.params.id)",
+      "      .then(${1/(.*)$/${1:/downcase}/} => {",
+      "        res.status(200).json({ message: 'Document deleted' })",
+      "      })",
+      "      .catch(err => {",
+      "        res.json(err);",
+      "      })",
+      "  });",
+      "",
+      "  module.exports = router;",
+      ""
+    ],
+    "description": "CRUD route file for Mongoose - FILE NAME MUST BE THE SAME TEXT AS MODEL DEFINITION FILE"
+  },
 
 	// ==================================
-//	To add snippets copy paste and uncomment the template below
-		// ==================================
-	// "template":{
-	// 	"prefix": "",
-	// 	"body": [ //(use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
-	// 		"",
-	//		 ""
-	// 	],
-	// 	"description": ""
-	// },	
+  // Front-end client snippets
+  // ==================================
 
+	"Axios Request": {
+    "prefix": "axreq",
+    "body": [
+      "axios.${1|get,post,put,delete|}('${2:url}')",
+      "\t.then(res => console.log(res.data))",
+      "\t.catch(err => console.log(err));"
+    ],
+    "description": "Axios request from Traversy Media: https://www.youtube.com/watch?v=JIqk9UxgKEc"
+  },
 
+  // ==================================
+  // DOM manipulation functions based on https://github.com/madskristensen/JavaScriptSnippetPack
+  // ==================================
+  "addEventListener": { //ok
+    "prefix": "ae",
+    "body": [
+      "${1:document}.addEventListener('${2:event}', ${3:functionToCall});",
+      ""
+    ],
+    "description": "Add event listener"
+  },
+  "getElementByID": { //ok
+    "prefix": "gi",
+    "body": [
+      "${1:document}.getElementById('${2:ID}');",
+      ""
+    ],
+    "description": "getElementByID"
+  },
+  "getElementsByClassName": { //ok
+    "prefix": "gc",
+    "body": [
+      "${1:document}.getElementsByClassName('${2:class}');",
+      ""
+    ],
+    "description": "getElementsByClassName"
+  },
+  "getElementsByTagName": { //ok
+    "prefix": "gt",
+    "body": [
+      "${1:document}.getElementsByTagName('${2:tag}');",
+      ""
+    ],
+    "description": "getElementsByTagName"
+  },
+  "querySelector": { //ok
+    "prefix": "qs",
+    "body": [
+      "${1:document}.querySelector('${2:selectors}');",
+      ""
+    ],
+    "description": "querySelector"
+  },
+  "querySelectorAll": { //ok
+    "prefix": "qsa",
+    "body": [
+      "${1:document}.querySelectorAll('${2:selectors}');",
+      ""
+    ],
+    "description": "querySelectorAll"
+  },
+  // ==================================
+  // Jasmine testing snippets
+  // ==================================
+  "Jasmine test suite": { //ok
+    "prefix": "jassuite",
+    "body": [
+      "describe('${1:Test_suite_description}', function() {",
+      "\t// ADD YOUR TESTS HERE",
+      "\t$0",
+      "",
+      "});" //(last line of array shiuld not end with a comma)
+    ],
+    "description": "Initiate test suite"
+  },
+  "Jasmine test": { //ok
+    "prefix": "jastest",
+    "body": [
+      "it('${1:test_description}', function() {",
+      "\texpect(${2:test_input}).${3:matcher}(${4:test_output});", // see https://jasmine.github.io/api/edge/matchers.html for list of prefefined matchers
+      "});",
+      "$0"
+    ],
+    "description": "Define Jasmine test"
+  }
+  // ==================================
+  //	To add snippets copy paste and uncomment the template below
+  // ==================================
+  // "template":{
+  // 	"prefix": "",
+  // 	"body": [ //(use array if replacement text is over more than one line. put \t at the beginning of lines to be indented)
+  // 		"",
+  //		 ""
+  // 	],
+  // 	"description": ""
+  // },
 }
