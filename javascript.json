@@ -15,7 +15,7 @@
   // },
 
 
-  "for array": { //ok
+  "for array": {
     "prefix": "4arr",
     "body": [
       "for (let ${1:i} = 0; $1 < ${2:array}.length; $1++) {",
@@ -25,7 +25,7 @@
     ],
     "description": "For loop for array"
   },
-  "array.map": { //ok
+  "array.map": {
     "prefix": "arrmap",
     "body": [
       "${1:array}.map(function(${2:arguements}) {",
@@ -35,7 +35,7 @@
     ],
     "description": "array.map method"
   },
-  "array.reduce": { //ok
+  "array.reduce": {
     "prefix": "arrreduce",
     "body": [
       "${1:array}.reduce(function(${2:arguements}) {",
@@ -45,7 +45,7 @@
     ],
     "description": "array.reduce method"
   },
-  "array.filter": { //ok
+  "array.filter": {
     "prefix": "arrfilter",
     "body": [
       "${1:array}.filter((${2:arguements}) {",
@@ -55,7 +55,7 @@
     ],
     "description": "array.filter method"
   },
-  "array.forEach": { //ok
+  "array.forEach": {
     "prefix": "arr4e",
     "body": [
       "${1:array}forEach(function(${2:arguement}){",
@@ -64,7 +64,7 @@
     ],
     "description": "Array.forEach iteration method"
   },
-  "console.log string": { //ok
+  "console.log string": {
     "prefix": "scl",
     "body": [
       "console.log(`$1`); //*********************",
@@ -72,7 +72,7 @@
     ],
     "description": "console.log string in backticks"
   },
-  "console.log ": { //ok
+  "console.log ": {
     "prefix": "cl",
     "body": [
       "console.log($1); //*********************",
@@ -80,7 +80,7 @@
     ],
     "description": "console.log"
   },
-  "for loop": { //ok
+  "for loop": {
     "prefix": "4loop",
     "body": [
       "for(let ${1:i} = 0; $1 ${2:condition}; $1++) { ",
@@ -89,7 +89,7 @@
     ],
     "description": "for loop"
   },
-  "for loop 2d array": { //ok
+  "for loop 2d array": {
     "prefix": "4loop2d",
     "body": [
       "for(let ${1:i} = 0; $1 < ${2:array}.length; $1++) { ",
@@ -120,11 +120,9 @@
     ],
     "description": "array.sort descending"
   },
-
 	// ==================================
 	// Express back-end snippets
 	// ==================================
-
 	"Mongoose data model template": {
 		"prefix": "mmodel",
 		"body": [
@@ -142,7 +140,6 @@
 		],
 		"description": "Generic model template with timestamps activated"
 	},
-
   "Mongoose CRUD route file": {
     "prefix": "mcrud",
     "body": [
@@ -233,11 +230,9 @@
     ],
     "description": "CRUD route file for Mongoose - FILE NAME MUST BE THE SAME TEXT AS MODEL DEFINITION FILE"
   },
-
 	// ==================================
   // Front-end client snippets
   // ==================================
-
 	"Axios Request": {
     "prefix": "axreq",
     "body": [
@@ -247,7 +242,6 @@
     ],
     "description": "Axios request from Traversy Media: https://www.youtube.com/watch?v=JIqk9UxgKEc"
   },
-
   // ==================================
   // DOM manipulation functions based on https://github.com/madskristensen/JavaScriptSnippetPack
   // ==================================
