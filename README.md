@@ -6,7 +6,7 @@ Feel free to use this and to let me know if you find any bugs or want to have it
 
 For a good video on snippets and how to get them installed see here: https://youtu.be/K3gLlZm-m_8
 
-### the numbersToText file can now be found in the separate [Number Convertes repo](https://github.com/mjkeeble/numberConverters)
+### the numbersToText file can now be found in the separate [Number Converters repo](https://github.com/mjkeeble/numberConverters)
 
 Have fun, 
 
