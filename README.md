@@ -26,6 +26,15 @@ Have fun,
 ### Array methods
  Abbreviation | Description
  ------------ | -----------
+=======
+ abbreviation | description
+ ------------ | -----------
+### For-loops |
+4loop | 'for' loop with counter
+4arr | 'for' loop over an array
+4loop2d | 'for' loop for a 2-dimensional array
+### Array methods |
+>>>>>>> 6d91bbd646e28b1187b20f4d3f4a5ce633a1c9d2
 arrmap | array.map method
 arrreduce | array.reduce method
 arrfilter | array.filter method
@@ -40,6 +49,12 @@ cl | console.log()
 ### DOM manipulation 
  Abbreviation | Description
  ------------ | -----------
+=======
+### console.log |
+sclog | console.log('string')
+cl | console.log()
+### DOM manipulation |
+>>>>>>> 6d91bbd646e28b1187b20f4d3f4a5ce633a1c9d2
 ae | document.addEventListener
 gi | document.getElementByID
 gc | document.getElementByClassName
@@ -61,6 +76,14 @@ axreq | Axios request (from Traversey Media)
  Abbreviation | Description
  ------------ | -----------
 
+=======
+# MERN-stack snippets |
+### Back-end |
+mcrud | Mongoose CRUD route file template
+mmodel | Mongoose data schema file template
+### Front-end |
+axreq | Axios request (from Traversey Media)
+# Jasmine test suite snippets |
 jassuite | Initiate Jasmine test suite
 jastest | Jasmine test definition within suite
 
