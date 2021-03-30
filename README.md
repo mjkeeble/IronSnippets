@@ -1,12 +1,14 @@
 # Code snippets
 
-The snippets files contain a variety of snippets for common programming structures and components for MERN full-stack applications put together for my own benefit
+The snippets files contain a variety of snippets for common programming structures and components in MERN full-stack applications put together for my own benefit. I decided to put these together as an aid while programming to
+* minimise the risk of stupid errors, and
+* provide immediately accessable templates for structures so that I don't need to look up the syntax every time.
 
-Feel free to use this and to let me know if you find any bugs or want to have items added.
+I can't promise these snippets will be useful to you, but feel free to try them out and to let me know if you find any bugs or want to have items added.
 
-For a good video on snippets and how to get them installed see here: https://youtu.be/K3gLlZm-m_8
+For a good video on snippets and how to install them in VS Code see [here](https://youtu.be/K3gLlZm-m_8).
 
-### the numbersToText file can now be found in the separate [Number Converters repo](https://github.com/mjkeeble/numberConverters)
+#### Please note that the numbersToText conversion file previously included here can now be found in the separate [Number Converters repo](https://github.com/mjkeeble/numberConverters).
 
 Have fun, 
 
